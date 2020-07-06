@@ -9,7 +9,7 @@ import org.springframework.web.util.HtmlUtils;
 @RestController
 public class DemoController {
 
-	@GetMapping("/hello")
+	@GetMapping("/xss")
 	private String getData(@RequestParam String name) {
 		System.out.println(HtmlUtils.htmlEscape(name));
 		return HtmlUtils.htmlEscape(name);
